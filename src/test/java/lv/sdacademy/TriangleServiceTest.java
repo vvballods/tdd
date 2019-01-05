@@ -36,9 +36,9 @@ public class TriangleServiceTest {
 
     @Test
     public void calculatePerimeterForTriangle1() {
-        long perimeterForTrianle1 = triangleService.calculatePerimeter(triangle1);
+        long perimeterForTriangle1 = triangleService.calculatePerimeter(triangle1);
 
-        assertEquals(9L, perimeterForTrianle1);
+        assertEquals(9L, perimeterForTriangle1);
     }
 
     @Test
@@ -48,8 +48,8 @@ public class TriangleServiceTest {
         when(triangle2.getSide2()).thenReturn(4L);
         when(triangle2.getSide3()).thenReturn(4L);
 
-        long perimeterForTrianle2 = triangleService.calculatePerimeter(triangle2);
+        long perimeterForTriangle2 = triangleService.calculatePerimeter(triangle2);
 
-        assertEquals(12L, perimeterForTrianle2);
+        assertEquals(12L, perimeterForTriangle2);
     }
 }
