@@ -36,6 +36,7 @@ public class TriangleServiceTest {
 
     @Test
     public void calculatePerimeterForTriangle1() {
+        System.out.println("Running calculatePerimeterForTriangle1");
         long perimeterForTriangle1 = triangleService.calculatePerimeter(triangle1);
 
         assertEquals(9L, perimeterForTriangle1);
@@ -43,6 +44,7 @@ public class TriangleServiceTest {
 
     @Test
     public void calculatePerimeterForTriangle2() {
+        System.out.println("Running calculatePerimeterForTriangle2");
         triangle2 = mock(Triangle.class);
         when(triangle2.getSide1()).thenReturn(4L);
         when(triangle2.getSide2()).thenReturn(4L);

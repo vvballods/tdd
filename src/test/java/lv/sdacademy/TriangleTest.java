@@ -27,6 +27,8 @@ public class TriangleTest {
 
     @Test
     public void createTriangle() {
+        System.out.println("Running createTriangle");
+
         Triangle triangle = new Triangle(3, 3, 3);
 
         assertNotNull(triangle);
@@ -37,11 +39,15 @@ public class TriangleTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void whenOneSideIsZeroTriangleShouldNotBeCreated() {
+        System.out.println("Running whenOneSideIsZeroTriangleShouldNotBeCreated");
+
         new Triangle(0, 3, 3);
     }
 
     @Test
     public void whenOneSideIsZeroTriangleShouldNotBeCreatedUsingRule() {
+        System.out.println("Running whenOneSideIsZeroTriangleShouldNotBeCreatedUsingRule");
+
         exception.expect(IllegalArgumentException.class);
         exception.expectMessage("Side length should be positive number");
         new Triangle(0, 3, 3);
