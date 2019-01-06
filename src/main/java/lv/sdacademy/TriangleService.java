@@ -8,4 +8,8 @@ public class TriangleService {
         }
         throw new IllegalArgumentException("Please provide triangle!");
     }
+
+    public long calculateDoubledPerimeter(Triangle triangle) {
+        return calculatePerimeter(triangle) * 2;
+    }
 }

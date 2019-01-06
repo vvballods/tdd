@@ -8,8 +8,7 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 
 @RunWith(MockitoJUnitRunner.class)
@@ -40,6 +39,7 @@ public class TriangleServiceTest {
         long perimeterForTriangle1 = triangleService.calculatePerimeter(triangle1);
 
         assertEquals(9L, perimeterForTriangle1);
+        verify(triangle1.getSide1(), atLeastOnce());
     }
 
     @Test
@@ -53,5 +53,14 @@ public class TriangleServiceTest {
         long perimeterForTriangle2 = triangleService.calculatePerimeter(triangle2);
 
         assertEquals(12L, perimeterForTriangle2);
+    }
+
+    @Test
+    public void calculateDoubledPerimeterForTriangle() {
+        System.out.println("Running calculatePerimeterForTriangle");
+
+        long perimeterForTriangle2 = triangleService.calculateDoubledPerimeter(triangle1);
+
+        assertEquals(18L, perimeterForTriangle2);
     }
 }
